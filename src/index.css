@@ -12,9 +12,9 @@ code {
     monospace;
 }
 
-* {
+/* * {
   border: black solid 1px
-}
+} */
 
 .layout {
   display:flex;
@@ -32,6 +32,11 @@ code {
   text-decoration: none;
   color: black;
   background-color: rgb(0,100,100) ;
+}
+
+.page {
+  max-width: 800px;
+  text-wrap:balance;
 }
 
 .projects-page {
@@ -62,4 +67,12 @@ code {
 .project-tile > p {
   max-width: 400px;
   text-wrap:wrap;
+}
+
+.contact-tile {
+  margin: 1rem;
+  padding: .5rem;
+  background-color: #aac;
+  border: 1px solid #337;
+  border-radius: 3px;
 }

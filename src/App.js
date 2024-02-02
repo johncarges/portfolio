@@ -7,6 +7,7 @@ import layout from './components/layout';
 import Projects from './pages/projects';
 import ProjectDetail from './pages/projectDetail';
 import Layout from './components/layout';
+import Contact from './pages/contact';
 
 const router = createBrowserRouter([
   {
@@ -26,8 +27,8 @@ const router = createBrowserRouter([
         element: <ProjectDetail/>
       },
       {
-        path: '/about',
-        element: <h1>About Me</h1>
+        path: '/contact',
+        element: <Contact/>
       }
     ]
   },
