@@ -4,7 +4,9 @@ import {projectData} from '../projectData'
 
 export default function Projects() {
 
-    const renderedProjects = projectData.map((project, index)=>{
+    const projectsToDisplay = projectData.filter(project=>project.display)
+
+    const renderedProjects = projectsToDisplay.map((project, index)=>{
         return (
             <ProjectTile key={index} project={project}/>
         )

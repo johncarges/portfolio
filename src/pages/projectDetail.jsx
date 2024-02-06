@@ -10,16 +10,27 @@ export default function ProjectDetail() {
     })[0]
 
 
+    const deployText = project.currentlyDeployed 
+        ? <a href={project.deployLink}>Currently deployed via Render</a>
+        : project.deployLink && <p style={{'font-size':'small'}}>Not currently deployed</p> 
+    // Only show link/'not currently deployed' if there is a link. (not for cli's, etc)
+
+
     const renderedSections = project.sections.map(section => {
         return <SectionTile section={section}/>
     })
 
     return (
         <div className='project-detail-page page'>
-            <h1>{project.name}</h1>
-            <h4>{project.subtitle}</h4>
-            
-            <p>{project.description}</p>
+            <div className='project-detail-section tile'>
+                <h1>{project.name}</h1>
+                <img className='main-project-image' src={project.image}/>
+                <h3>{project.subtitle}</h3>
+                {!!project.collaborators && <h5>In collaboration with {project.collaborators[0]}</h5>}
+                {deployText}
+                <a style={{'background-color':'#aaa','border-radius':'3px', 'padding':'.3rem'}} href={project.githubLink}>GitHub</a>
+                <p>{project.description}</p>
+            </div>
             {renderedSections}
         </div>
     )
@@ -40,9 +51,9 @@ function SectionTile(props) {
     }
 
     return (
-        <div>
-            <h4>{title}</h4>
-            <img src={image} alt={title}/>
+        <div className='project-detail-section tile'>
+            <h3>{title}</h3>
+            <img className='section-image' src={image} alt={title}/>
             {renderedDescription}
         </div>
     )

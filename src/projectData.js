@@ -1,28 +1,37 @@
+import vakitchenGeneral from './assets/VaKitchen-general.png'
+import vakitchenFrontEnd from './assets/VaKitchen-front-end.png'
+import vakitchenAPI from './assets/VaKitchen-API.png'
+
 export const projectData = [
     {
         name: 'VaKitchen',
-        subtitle:"",
-        description:"",
+        subtitle:"Full Stack Web App for kitchen appliance rental service.",
+        description:"Loosely based on the rental service Rent The Runway, this mock website imagines a service that would allow users to rent kitchen appliances through a monthly subscription plan. Users can create an account with ",
         detailUrl:"vakitchen",
         githubLink:'https://github.com/johncarges/VaKitchen',
-        image:'',
+        currentlyDeployed: false,
+        deployLink: 'a',
+        tags: ['Python', 'Javascript','React.js','FastAPI','PostgreSQL'],
+        image:vakitchenGeneral,
+        collaborators: null,
         sections:[
             {
                 title: 'Front End',
-                image: '',
+                image: vakitchenFrontEnd,
                 description: 'This app is built in React. Navigation is built with React Router, paying particular attention to many of the tools and paradigms new to React Router 6, such as loaders, actions, and RouterProviders.'
             },
             {
                 title: 'API',
-                image: '',
-                description: 'Having worked with Flask and SQLAlchemy (an ORM) during my Flatiron bootcamp, with my first project post-graduation, I wanted to try to learn as many new technologies. Thus, the API for this project was built using FastAPI'
+                image: vakitchenAPI,
+                description: "Having worked with Flask and SQLAlchemy (an ORM) during my Flatiron bootcamp, with my first project post-graduation, I wanted to try to learn as many new technologies as possible. With that in mind, I built the API using FastAPI, with model classes inherting from Pydantic's BaseModel class for data validation and easy debugging. Rather than use an ORM, I chose to write SQL queries as individual SQL files, which are read in by the various Python files that define the API routes. Not my favorite way to accomplish database interaction (especially in fetches with a variety of parameters, such as fetching items with multiple filters, a sort method, and user validations), but good practice!"
             },
             {
                 title: 'Database',
                 image: '',
                 description:''
             }
-        ]
+        ],
+        display: true,
     },
     {
         name: "The Best Boy",
@@ -32,7 +41,11 @@ export const projectData = [
         `,
         detailUrl:"thebestboy",
         githubLink:'https://github.com/johncarges/TheBestBoy',
+        currentlyDeployed: false,
+        deployLink: 'a',
+        tags: ['Python','Flask','SQLite3','Javascript','React.js'],
         image: "",
+        collaborators: null,
         sections:[
             {
                 title: 'Front End',
@@ -49,7 +62,8 @@ export const projectData = [
                 image: '',
                 description:''
             }
-        ]
+        ],
+        display: true,
     },
     {
         name: "Cave Crawler",
@@ -57,7 +71,11 @@ export const projectData = [
         description:"Built in Python with calls to a SQLite3 database, Cave Crawler is a command line game in which players can explore a cave network, encountering numerous creatures, traps, and hidden treasures along the way. This project was a collaboration with BreElle Wells. BreElle was responsible for user functionality and game and menu design (including the incredible ASCII art!), and I was responsible for the game models and logic, though all work was done with input and feedback from each other.",
         detailUrl:"cavecrawler",
         githubLink:'https://github.com/johncarges/Phase-3-CLI-Cave-Crawler',
+        currentlyDeployed: false,
+        deployLink: '',
         image: "",
+        collaborators:['BreElle Wells'],
+        tags: [],
         sections:[
             {
                 title: 'Game Logic',
@@ -73,8 +91,23 @@ export const projectData = [
                 image: '',
                 description:"Players can create accounts in order to save their play history and statistics. With a wide variety of creatures and treasures to encounter, it's not possible to see everything in one playthrough of the game. As users have new encounters, their discoveries are logged to a SQLite3 database, and they can view their discoveries from the main menu, with details such as the number of times a creature has been encountered, and whether a player has succesfully dispactched the creature."
             }
-        ]
+        ],
+        display: true
     },
+    {
+        name: 'Concert Finder',
+        subtitle:"Web app utilizing Seatgeek's public API to search and save concert information",
+        description:'',
+        detailUrl:'concertfinder',
+        githubLink:'',
+        currentlyDeployed:false,
+        deployLink: '',
+        image: '',
+        collaborators: ['Nial Johnson'],
+        tags: ['Javascript', 'React.js'],
+        sections: [],
+        display: false,
 
+    }
 
 ]
