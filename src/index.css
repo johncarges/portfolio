@@ -5,7 +5,7 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif; */
   font-family: 'Montserrat';
-  --background-color-main: rgb(240, 204, 141);
+  --background-color-main: rgb(241, 213, 166);
   background-color:var(--background-color-main);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -27,7 +27,7 @@ a:-webkit-any-link {
 }
 
 .tile {
-  margin: 2rem 0rem;
+  margin: 1rem 0rem;
   padding: 1rem;
   background-color: hsla(30, 49%, 10%, 0.1);
   border: solid 1px hsl(30, 28%, 60%);

@@ -1,6 +1,7 @@
 import React from 'react'
 import { useParams } from "react-router-dom";
 import { projectData } from '../projectData';
+import { MultiLineText } from '../components/multilineText';
 
 export default function ProjectDetail() {
     const {projectName} = useParams()
@@ -28,8 +29,8 @@ export default function ProjectDetail() {
                 <h3>{project.subtitle}</h3>
                 {!!project.collaborators && <h5>In collaboration with {project.collaborators[0]}</h5>}
                 {deployText}
-                <a style={{'background-color':'#aaa','border-radius':'3px', 'padding':'.3rem'}} href={project.githubLink}>GitHub</a>
-                <p>{project.description}</p>
+                <a style={{'text-decoration':'underline', 'padding':'.3rem'}} href={project.githubLink}>&rarr; GitHub</a>
+                <MultiLineText text={project.description}/>
             </div>
             {renderedSections}
         </div>
@@ -49,11 +50,11 @@ function SectionTile(props) {
     } else {
         renderedDescription = <p>{description}</p>
     }
-
+    console.log(image)
     return (
         <div className='project-detail-section tile'>
             <h3>{title}</h3>
-            <img className='section-image' src={image} alt={title}/>
+            { (!!image) && <img className='section-image' src={image} alt={title}/>}
             {renderedDescription}
         </div>
     )
