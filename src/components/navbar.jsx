@@ -1,12 +1,17 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Navbar() {
 
+    const className = ({isActive})=> {
+        return isActive ? "active navlink" : "inactive navlink"
+    }
+
     return (
         <header className='navbar'>
-            <Link to='/'>About</Link>
-            <Link to='/projects'>Projects</Link>
-            <Link to='/contact'>Contact</Link>
+            <NavLink className={className} to='/'>About</NavLink>
+            <NavLink className={className} to='/projects'>Projects</NavLink>
+            <NavLink className={className} to='/contact'>Contact</NavLink>
+            
         </header>
     )
 

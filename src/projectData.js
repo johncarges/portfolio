@@ -11,6 +11,10 @@ import caveCrawlerMap from './assets/CaveCrawlerMap.png'
 import caveCrawlerDB from './assets/CaveCrawlerDB.png'
 import caveCrawlerEnemy from './assets/CaveCrawlerEnemy.png'
 
+import prepSessionCalendar from './assets/PrepSessionCalendar.png'
+import prepSessionMain from './assets/PrepSessionMain.png'
+import prepSessionDatabase from './assets/PrepSessionDatabase.png'
+
 
 export const projectData = [
     {
@@ -67,7 +71,7 @@ export const projectData = [
             {
                 title: 'API',
                 image: bestBoyApi,
-                description: 'The API was written using Flask, and in particular the Resource class from the flask_restful library. Because all functionality requires a logged in user, all routes involve checks to make sure that the active user is tied to the particular data (production, crewmember contact, etc.) that is being requested. Upon login, the user id is stored in session.'
+                description: `The API was written using Flask, and in particular the Resource class from the flask_restful library. Because all functionality requires a logged in user, all routes involve checks to make sure that the active user is tied to the particular data (production, crewmember contact, etc.) that is being requested. Upon login, the user id is stored in session. <br> One interesting consideration with this project was how to handle changes that users make to multiple pieces of information at once. For example, when assigning crew for a particular day, a user can add/update/delete roles and crew assignments to those roles. This happens within a modal, and the user can choose to cancel all changes or save them, simultaneously triggering a number of changes to different tables and rows of the database. In the end it was most efficient to simply delete all rows pertaining to that workday, and add new rows based on the total data that the user saved.`
             },
             {
                 title: 'Database and Models',
@@ -119,6 +123,27 @@ export const projectData = [
         tags: ['Javascript', 'React.js'],
         sections: [],
         display: false,
+
+    },
+    {
+        name: 'Interview Prep Scheduler',
+        subtitle:"Web app for scheduling test and interview prep sessions with friends",
+        description:'Built to facilitate scheduling group study sessions after graduating, this app allows users to sign up with their email, find friends on the app, and schedule study sessions around particular topics. This was our first full stack web app project, using Javascript with React for the front end, Python with Flask for the back end, and a locally hosted SQLite database.',
+        detailUrl:'prepscheduler',
+        githubLink:'https://github.com/tjs7321/interview-prep-scheduler',
+        currentlyDeployed:false,
+        deployLink: '',
+        image: prepSessionMain,
+        collaborators: ['Teddy Smith'],
+        tags: ['Javascript', 'React.js', 'Python','Flask','SQLite3'],
+        sections: [
+            {
+                title: 'Challenges',
+                image: prepSessionDatabase,
+                description:"This was our first full stack collaborative project, and a great test of our planning and communication abilities. Though we may have been working on completely different sides of the app at any given time, subtle changes to, for example, the API, could completely break the app in unanticipated ways. We quickly learned to be clear about naming conventions and file structure before writing code.<br>One of the challenges we wanted to tackle when coming up with the idea for the app was modeling user-to-user connection. 'Friending', 'Following', or 'Connecting' are common features in many apps, but we quickly realized that modeling this would go beyond what we had learned about basic one-to-many and many-to-many relationships. For example, did we want an asymmetrical model where any individual can follow another (in which case there may be two distinct rows in the followings table, for the same two individuals) or did we want to make a symmetric friendship model, where both friends would have to accept before being marked as a valid friendship? In the end, we chose to allow users to follow each other (as you can see in apps like LinkedIn) to see their upcoming events.<br>This created some very thorny language and variable names, and we had to be extra diligent with each other when discussing followers and ones' following. For example, 'user1 opts to follow user2, thus adding a row to the follows table where follower=user1.id, following=user2.id'."
+            }
+        ],
+        display: true,
 
     }
 

@@ -13,7 +13,7 @@ export default function Projects() {
     })
 
     return (
-        <div className='projects-page'>
+        <div className='projects-page page'>
             <div className='projects-list'>
                 {renderedProjects}
             </div>
