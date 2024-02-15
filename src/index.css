@@ -7,6 +7,7 @@ body {
   font-family: 'Montserrat';
   --background-color-main: hsl(38, 73%, 80%);
   background-color:var(--background-color-main);
+  --border-color:hsl(38, 40%, 50%);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scrollbar-width: none;
@@ -35,7 +36,7 @@ a:-webkit-any-link {
   margin: 1rem 0rem;
   padding: 1rem;
   background-color: hsla(30, 49%, 10%, 0.1);
-  border: solid 1px hsl(30, 28%, 60%);
+  border: solid 1px var(--border-color);
   box-shadow: 2px 2px 5px 2px hsl(30, 28%, 50%);
   border-radius: 4px
 }
@@ -150,8 +151,8 @@ a:-webkit-any-link {
   top: 30px;
   left:-190px;
   border-radius: 3px;
-  border:3px solid darken(var(--background-color),80%);
-  box-shadow: 3px 3px 1px 1px rgb(50,50,50);
+  border:1px solid var(--border-color);
+  box-shadow: -3px -3px 2px 1px hsla(30, 28%, 50%, 50%);
   padding:1rem;
 }
 
