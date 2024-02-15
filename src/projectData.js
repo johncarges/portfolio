@@ -18,7 +18,7 @@ import prepSessionDatabase from './assets/PrepSessionDatabase.png'
 
 export const projectData = [
     {
-        name: 'VaKitchen',
+        name: 'Va-Kitchen',
         subtitle:"Full Stack Web App for kitchen appliance rental service.",
         description:"Loosely based on the rental service Rent The Runway, this mock website imagines a service that would allow users to rent kitchen appliances through a monthly subscription plan.",
         detailUrl:"vakitchen",
@@ -113,21 +113,6 @@ export const projectData = [
         display: true
     },
     {
-        name: 'Concert Finder',
-        subtitle:"Web app utilizing Seatgeek's public API to search and save concert information",
-        description:'',
-        detailUrl:'concertfinder',
-        githubLink:'',
-        currentlyDeployed:false,
-        deployLink: '',
-        image: '',
-        collaborators: ['Nial Johnson'],
-        tags: ['Javascript', 'React.js'],
-        sections: [],
-        display: false,
-
-    },
-    {
         name: 'Interview Prep Scheduler',
         subtitle:"Web app for scheduling test and interview prep sessions with friends",
         description:'Built to facilitate scheduling group study sessions after graduating, this app allows users to sign up with their email, find friends on the app, and schedule study sessions around particular topics. This was our first full stack web app project, using Javascript with React for the front end, Python with Flask for the back end, and a locally hosted SQLite database.',
@@ -146,7 +131,21 @@ export const projectData = [
             }
         ],
         display: true,
-
-    }
-
+    },
+    {
+        name: 'Concert Finder',
+        subtitle:"Web app utilizing Seatgeek's public API to search and save concert information",
+        description:'',
+        detailUrl:'concertfinder',
+        githubLink:'',
+        currentlyDeployed:false,
+        deployLink: '',
+        image: '',
+        collaborators: ['Nial Johnson'],
+        tags: ['Javascript', 'React.js'],
+        sections: [],
+        display: false,
+    
+    },
+    
 ]
