@@ -10,7 +10,7 @@ export default function Navbar() {
         <header className='navbar'>
             <NavLink className={className} to='/'>About</NavLink>
             <NavLink className={className} to='/projects'>Projects</NavLink>
-            <NavLink className={className} to='/contact'>Contact</NavLink>
+            <NavLink className={className} to='/contact'>Info</NavLink>
             
         </header>
     )
