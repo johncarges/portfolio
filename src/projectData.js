@@ -20,7 +20,7 @@ export const projectData = [
     {
         name: 'VaKitchen',
         subtitle:"Full Stack Web App for kitchen appliance rental service.",
-        description:"Loosely based on the rental service Rent The Runway, this mock website imagines a service that would allow users to rent kitchen appliances through a monthly subscription plan. Users can create an account with ",
+        description:"Loosely based on the rental service Rent The Runway, this mock website imagines a service that would allow users to rent kitchen appliances through a monthly subscription plan.",
         detailUrl:"vakitchen",
         githubLink:'https://github.com/johncarges/VaKitchen',
         currentlyDeployed: false,
@@ -76,7 +76,9 @@ export const projectData = [
             {
                 title: 'Database and Models',
                 image: bestBoyBackend,
-                description:''
+                description:`All database tables were modelled using classes that inherit from SQLAlchemy's model class, allowing for the creation of pythonic methods to search, sort and filter data from the tables, as well as SQLAlchemy's built-in methods for adding and deleting rows. Thus, no actual SQL was written for this project (see the project VaKitchen for an example when I chose to only use SQL statements for database interaction).<br>
+                Once all the small details like cross-origin issues and app configurations were sorted, this turned out to be the most straightforward part of the project!
+                `
             }
         ],
         display: true,
@@ -132,7 +134,7 @@ export const projectData = [
         detailUrl:'prepscheduler',
         githubLink:'https://github.com/tjs7321/interview-prep-scheduler',
         currentlyDeployed:false,
-        deployLink: '',
+        deployLink: 'a',
         image: prepSessionMain,
         collaborators: ['Teddy Smith'],
         tags: ['Javascript', 'React.js', 'Python','Flask','SQLite3'],

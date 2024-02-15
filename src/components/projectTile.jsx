@@ -6,7 +6,7 @@ export default function ProjectTile(props) {
     const {project} = props
 
     const deployText = project.currentlyDeployed 
-        ? <a href={project.deployLink}>Currently deployed via Render</a>
+        ? <a target="_blank" rel="noopener noreferrer" href={project.deployLink}>Currently deployed via Render</a>
         : project.deployLink && <p style={{'font-size':'small'}}>Not currently deployed</p> 
     // Only show link/'not currently deployed' if there is a link. (not for cli's, etc)
 
