@@ -15,6 +15,8 @@ import prepSessionCalendar from './assets/PrepSessionCalendar.png'
 import prepSessionMain from './assets/PrepSessionMain.png'
 import prepSessionDatabase from './assets/PrepSessionDatabase.png'
 
+import concertFinderSearch from './assets/ConcertFinderSearch.png'
+import concertFinderAPI from './assets/ConcertFinderAPI.png'
 
 export const projectData = [
     {
@@ -135,16 +137,22 @@ export const projectData = [
     {
         name: 'Concert Finder',
         subtitle:"Web app utilizing Seatgeek's public API to search and save concert information",
-        description:'',
+        description:`This front end web app packages the SeatGeek web API, allowing users to search for upcoming concerts by venue, band, or city.`,
         detailUrl:'concertfinder',
-        githubLink:'',
+        githubLink:'https://github.com/johncarges/concert-finder',
         currentlyDeployed:false,
         deployLink: '',
-        image: '',
+        image: concertFinderSearch,
         collaborators: ['Nial Johnson'],
         tags: ['Javascript', 'React.js'],
-        sections: [],
-        display: false,
+        sections: [
+            {
+                title: 'Motivation',
+                image: concertFinderAPI,
+                description: `Though the objective of this collaborative project was to practice what we had learned about React.js, we also wanted to use the opportunity to get experience with using an external API. As Nial and I both love music, we chose to look at SeatGeek's public API, which is very well-documented and has tons of options for filtering and limiting searches of upcoming concerts.`
+            }
+        ],
+        display: true,
     
     },
     

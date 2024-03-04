@@ -29,7 +29,7 @@ export default function ProjectDetail() {
                 <h3>{project.subtitle}</h3>
                 {!!project.collaborators && <h5>In collaboration with {project.collaborators[0]}</h5>}
                 {deployText}
-                <a style={{'text-decoration':'underline', 'padding':'.3rem'}} href={project.githubLink}>&rarr; GitHub</a>
+                <a style={{'text-decoration':'underline', 'padding':'.3rem'}} target="_blank" rel="noopener noreferrer" href={project.githubLink}>&rarr; GitHub</a>
                 <MultiLineText text={project.description}/>
             </div>
             {renderedSections}

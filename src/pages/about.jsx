@@ -15,7 +15,7 @@ export default function About() {
                 <h3>Experience and Education</h3>
                 <Timeline />
                 <hr />
-                <h3>About Me</h3>
+                <h3>Left Brain Meets Right Brain</h3>
                 <MultiLineText text={bioCopy}/>
                 <p style={{'font-style': 'italic'}}>This website built with React.js, and deployed 
                 via <a target="_blank" rel="noopener noreferrer" href='https://render.com'>Render</a>.</p>
