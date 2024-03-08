@@ -12,7 +12,12 @@ export default function ProjectDetail() {
 
 
     const deployText = project.currentlyDeployed 
-        ? <a href={project.deployLink}>Currently deployed via Render</a>
+        ? <a style={{'text-decoration':'underline', 'padding':'.3rem'}} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            href={project.deployLink}
+            
+            >&rarr; Visit</a>
         : project.deployLink && <p style={{'font-size':'small'}}>Not currently deployed</p> 
     // Only show link/'not currently deployed' if there is a link. (not for cli's, etc)
 

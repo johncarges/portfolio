@@ -175,8 +175,6 @@ a:-webkit-any-link {
     
 }
 
-
-
 .chunk:hover {
   height: 20px;
   background-color:purple;
@@ -215,6 +213,10 @@ a:-webkit-any-link {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
+  .project-tile {
+    height: 450px;
+  }
 }
 
 @media (max-width: 700px) {
@@ -233,6 +235,7 @@ a:-webkit-any-link {
 
 .project-tile > * {
   text-decoration: none!important;
+  color: black;
 }
 
 .project-tile-img-container {
@@ -244,21 +247,20 @@ a:-webkit-any-link {
 }
 
 .project-tile-img-container > img {
-  width: auto;
+  /* width: auto; */
   height : auto;
-  max-height: 60%;
   max-width: 60%;
   margin: 1rem;
-}
-
-.project-tile > * {
-  text-decoration: none;
-  color: black;
 }
 
 .project-tile > p {
   max-width: 400px;
   text-wrap:wrap;
+}
+
+.project-tile a {
+  padding: .5rem;
+  z-index: 1;
 }
 
 .project-detail-page {

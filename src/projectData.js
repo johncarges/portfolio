@@ -1,3 +1,7 @@
+import oscarsMain from './assets/OscarsMain.png'
+import oscarsGroups from './assets/OscarsGroups.png'
+import oscarsJoin from './assets/OscarsJoin.png'
+
 import vakitchenGeneral from './assets/VaKitchen-general.png'
 import vakitchenFrontEnd from './assets/VaKitchen-front-end.png'
 import vakitchenAPI from './assets/VaKitchen-API.png'
@@ -20,7 +24,38 @@ import concertFinderAPI from './assets/ConcertFinderAPI.png'
 
 export const projectData = [
     {
-        name: 'Va-Kitchen',
+        name: 'Oscars Ballot',
+        subtitle:"Full Stack Game for guessing Oscar Winners",
+        description:`This web app allows users to place guesses on Oscar winners and form groups with friends and family to compete. (If you wish to try it out, feel free to create an account or log in with username and password 'demo1').`,
+        detailUrl:'oscarsballot',
+        githubLink:'https://github.com/johncarges/oscarsballot',
+        currentlyDeployed:true,
+        deployLink: 'https://www.oscarsballot.com/',
+        image: oscarsMain,
+        collaborators: null,
+        tags: ['Javascript', 'React.js', 'Node.js', 'MongoDB','Express.js'],
+        sections: [
+            {
+                title: 'Motivation',
+                image: oscarsGroups,
+                description: `I had two primary motivations behind building this app. First, having used python (with Flask or FastAPI) for building back-end API's in the past, I wanted to learn and practice using Node.js, picking up libraries like Express and Mongoose along the way. I similarly wanted hands-on experience with MongoDB. The second driving idea behind this app would be to build a full stack app that friends and family could use. This consideration led me to learn more about things like web service deployment, DNS, formatting for desktop and mobile, and browser-specific restrictions on things like cookies and cross origin requests.`
+            },
+            {
+                title: 'MVP',
+                image: oscarsJoin,
+                description: `The site allows users to make an account (with a hashed password and session storage for return visits), fill out their guesses for Oscar winners, and create or join groups of friends and family to compare guesses and see who had the most correct. Users can share groups they've created either by sharing the group name and a randomly generated six-character code, or by copying a link to a page that prompts users to join. As the results come in on the night, I will be updating the MongoDB database from an admin site, and users will start to see which and how many guesses they've gotten correct.`
+            },
+            {
+                title: 'Database',
+                image: '',
+                description: `Using MongoDB simplified the data modelling for this project immensely. With a traditional table structure, I would have needed individual models and tables for awards, nominees (including information about the individual nominee as well as the film), user-ballots, individual responses (tying a user-ballot to a specific award, with a chosen winner), and group and user-group tables. With MongoDB documents, many of these nested models and joining models could be included in a smaller set of document-types, including user, group, and award.` 
+            }
+        ],
+        display: true,
+    
+    },
+    {
+        name: 'Kitchen Vacation',
         subtitle:"Full Stack Web App for kitchen appliance rental service.",
         description:"Loosely based on the rental service Rent The Runway, this mock website imagines a service that would allow users to rent kitchen appliances through a monthly subscription plan.",
         detailUrl:"vakitchen",

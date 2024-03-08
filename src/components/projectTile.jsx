@@ -1,12 +1,22 @@
 import React from 'react'
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import TagCluster from "./tagCluster"
 
 export default function ProjectTile(props) {
     const {project} = props
+    const navigate = useNavigate()
 
     const deployText = project.currentlyDeployed 
-        ? <a target="_blank" rel="noopener noreferrer" href={project.deployLink}>Currently deployed via Render</a>
+        ? <a 
+        // target="_blank" 
+        // rel="noopener noreferrer" 
+        href={project.deployLink}
+        onClick={(e)=>{
+            e.preventDefault()
+            e.stopPropagation()
+            window.location.replace(project.deployLink)
+        }}
+        >Try it out</a>
         : project.deployLink && <p style={{'font-size':'small'}}>Not currently deployed</p> 
     // Only show link/'not currently deployed' if there is a link. (not for cli's, etc)
 

@@ -15,6 +15,8 @@ export default function TagCluster(props) {
         'React.js': '#527ae6',
         'FastAPI': '#7ac69c',
         'Flask': '#daa',
+        'MongoDB': '#06c68c',
+        'Node.js': '#05ca02'
         
     }
 
